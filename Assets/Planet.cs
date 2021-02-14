@@ -3,30 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Planet 
+public class Planet : MonoBehaviour
 {
-
     public static float rescale = 30f;
+    private Vector3 distanceToSunScalator;
 
-    private string name;
+    public string name;
+    public float distanceToSun; //in AU
 
     private double x;
     private double y;
 
     private double xVelocity;
     private double yVelocity;
-
-
-    public Planet()
-    {
-
-        this.x = 1d;
-        this.y = 0d;
-
-        this.xVelocity = 0d;
-        this.yVelocity = 4d;
-
-    }
 
     public Vector3 updatePosition()
     {
@@ -45,5 +34,21 @@ public class Planet
         this.y = newY;
 
         return new Vector3((float) newX, 0, (float) newY);
+    }
+
+    void Start()
+    {
+        distanceToSunScalator = new Vector3(distanceToSun * Planet.rescale, 0, distanceToSun * Planet.rescale);
+
+        this.x = 1d;
+        this.y = 0d;
+
+        this.xVelocity = 0d;
+        this.yVelocity = 4d;
+    }
+
+    void Update()
+    {
+        transform.position = Vector3.Scale(this.updatePosition(), distanceToSunScalator);
     }
 }
