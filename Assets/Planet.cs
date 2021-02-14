@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour
 {
-    public static float rescale = 30f;
+    public static float rescale = 150f;
     private Vector3 distanceToSunScalator;
 
     public string name;
@@ -45,6 +45,8 @@ public class Planet : MonoBehaviour
 
         this.xVelocity = 0d;
         this.yVelocity = 4d;
+ 
+        Debug.Log(name + " is at " + Vector3.Scale(this.updatePosition(), distanceToSunScalator).ToString());
     }
 
     void Update()
