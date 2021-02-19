@@ -1960,7 +1960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112991313}
   m_LocalRotation: {x: -0.0046885298, y: 0.015538965, z: -0.28882658, w: 0.95724386}
-  m_LocalPosition: {x: 0, y: -100, z: 0}
+  m_LocalPosition: {x: -49, y: -184, z: 225}
   m_LocalScale: {x: 10000, y: 10000, z: 10000}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2106,6 +2106,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flySpeed: 0.5
+  ScrollWheelsensitivity: 10
+  mouseSensitivity: 1
 --- !u!20 &1221181705
 Camera:
   m_ObjectHideFlags: 0
