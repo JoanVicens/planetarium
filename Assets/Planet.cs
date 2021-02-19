@@ -46,7 +46,7 @@ public class Planet : MonoBehaviour
         this.xVelocity = 0d;
         this.yVelocity = 4d;
  
-        Debug.Log(name + " is at " + Vector3.Scale(this.updatePosition(), distanceToSunScalator).ToString());
+        //Debug.Log(name + " is at " + Vector3.Scale(this.updatePosition(), distanceToSunScalator).ToString());
     }
 
     void Update()
